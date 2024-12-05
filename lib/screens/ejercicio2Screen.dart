@@ -11,7 +11,7 @@ class Ejercicio2screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextEditingController velocidadController = TextEditingController();
-    const double tiempo = 25.0; // Tiempo fijo en segundos
+    const double tiempo = 25.0; 
     double? resultadoDistancia;
 
     return Scaffold(
@@ -40,15 +40,13 @@ class Ejercicio2screen extends StatelessWidget {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  // Convertir la entrada a un valor numérico
+                  
                   final double velocidadAngular =
                       double.tryParse(velocidadController.text) ?? 0.0;
 
-                  // Calcular la distancia recorrida
                   resultadoDistancia =
                       calcularDistancia(velocidadAngular, tiempo);
 
-                  // Mostrar resultado en un dialog
                   showDialog(
                     context: context,
                     builder: (context) {
